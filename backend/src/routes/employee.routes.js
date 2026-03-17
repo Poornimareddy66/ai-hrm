@@ -1,0 +1,12 @@
+﻿const router = require('express').Router();
+const ctrl = require('../controllers/employee.controller');
+const { protect, authorize } = require('../middleware/auth');
+router.use(protect);
+router.get('/stats', authorize('super_admin','hr_admin'), ctrl.getStats);
+router.get('/', ctrl.getAll);
+router.get('/:id', ctrl.getById);
+router.post('/', authorize('super_admin','hr_admin'), ctrl.create);
+router.put('/:id', authorize('super_admin','hr_admin','manager'), ctrl.update);
+router.delete('/:id', authorize('super_admin','hr_admin'), ctrl.delete);
+router.get('/:id/attrition-risk', authorize('super_admin','hr_admin','manager'), ctrl.getAttritionRisk);
+module.exports = router;

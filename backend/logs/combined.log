@@ -1,0 +1,22 @@
+2026-03-16 14:46:05 [info]: PostgreSQL connected
+2026-03-16 14:46:06 [info]: MongoDB connected
+2026-03-16 14:46:06 [info]: Redis connected
+2026-03-16 14:46:06 [info]: Server running on port 5000
+2026-03-16 16:26:50 [info]: ::ffff:172.18.0.1 - - [16/Mar/2026:16:26:50 +0000] "POST /api/v1/auth/login HTTP/1.1" 401 55 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0"
+2026-03-16 16:28:10 [info]: ::ffff:172.18.0.1 - - [16/Mar/2026:16:28:10 +0000] "POST /api/v1/auth/login HTTP/1.1" 401 55 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0"
+2026-03-16 16:28:20 [info]: ::ffff:172.18.0.1 - - [16/Mar/2026:16:28:20 +0000] "POST /api/v1/auth/login HTTP/1.1" 401 55 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0"
+2026-03-16 16:31:48 [info]: ::ffff:172.18.0.1 - - [16/Mar/2026:16:31:48 +0000] "POST /api/v1/auth/login HTTP/1.1" 401 55 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0"
+2026-03-16 16:34:18 [info]: ::ffff:172.18.0.1 - - [16/Mar/2026:16:34:18 +0000] "GET /health HTTP/1.1" 200 59 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0"
+2026-03-16 16:34:18 [info]: ::ffff:172.18.0.1 - - [16/Mar/2026:16:34:18 +0000] "GET /favicon.ico HTTP/1.1" 404 62 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0"
+2026-03-16 16:37:05 [info]: User logged in: admin@company.com
+2026-03-16 16:37:05 [info]: ::ffff:172.18.0.1 - - [16/Mar/2026:16:37:05 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 715 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0"
+2026-03-16 16:37:05 [error]: SequelizeEagerLoadingError: Employee is not associated to LeaveRequest!
+2026-03-16 16:37:05 [info]: ::ffff:172.18.0.1 - - [16/Mar/2026:16:37:05 +0000] "GET /api/v1/leave/requests?limit=5&status=pending HTTP/1.1" 500 73 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0"
+2026-03-16 16:37:05 [info]: ::ffff:172.18.0.1 - - [16/Mar/2026:16:37:05 +0000] "GET /api/v1/recruitment/stats HTTP/1.1" 200 92 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0"
+2026-03-16 16:37:05 [info]: ::ffff:172.18.0.1 - - [16/Mar/2026:16:37:05 +0000] "GET /api/v1/employees/stats HTTP/1.1" 200 73 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0"
+2026-03-16 16:37:06 [error]: SequelizeEagerLoadingError: Employee is not associated to LeaveRequest!
+2026-03-16 16:37:06 [info]: ::ffff:172.18.0.1 - - [16/Mar/2026:16:37:06 +0000] "GET /api/v1/leave/requests?limit=5&status=pending HTTP/1.1" 500 73 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0"
+2026-03-16 16:37:24 [error]: SequelizeEagerLoadingError: Department is not associated to Employee!
+2026-03-16 16:37:24 [info]: ::ffff:172.18.0.1 - - [16/Mar/2026:16:37:24 +0000] "GET /api/v1/employees?search=&page=1&limit=24 HTTP/1.1" 500 71 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0"
+2026-03-16 16:37:25 [error]: SequelizeEagerLoadingError: Department is not associated to Employee!
+2026-03-16 16:37:25 [info]: ::ffff:172.18.0.1 - - [16/Mar/2026:16:37:25 +0000] "GET /api/v1/employees?search=&page=1&limit=24 HTTP/1.1" 500 71 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0"

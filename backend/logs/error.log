@@ -1,0 +1,4 @@
+2026-03-16 16:37:05 [error]: SequelizeEagerLoadingError: Employee is not associated to LeaveRequest!
+2026-03-16 16:37:06 [error]: SequelizeEagerLoadingError: Employee is not associated to LeaveRequest!
+2026-03-16 16:37:24 [error]: SequelizeEagerLoadingError: Department is not associated to Employee!
+2026-03-16 16:37:25 [error]: SequelizeEagerLoadingError: Department is not associated to Employee!

@@ -1,0 +1,12 @@
+﻿const router = require('express').Router();
+const ctrl = require('../controllers/payroll.controller');
+const { protect, authorize } = require('../middleware/auth');
+router.use(protect);
+router.get('/summary', authorize('super_admin','hr_admin'), ctrl.getSummary);
+router.get('/', authorize('super_admin','hr_admin'), ctrl.getAll);
+router.get('/employee/:employeeId', ctrl.getEmployeePayroll);
+router.post('/generate', authorize('super_admin','hr_admin'), ctrl.generatePayroll);
+router.post('/bulk-approve', authorize('super_admin','hr_admin'), ctrl.bulkApprove);
+router.patch('/:id/approve', authorize('super_admin','hr_admin'), ctrl.approvePayroll);
+router.patch('/:id/disburse', authorize('super_admin'), ctrl.disbursePayroll);
+module.exports = router;

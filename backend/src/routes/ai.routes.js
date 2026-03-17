@@ -1,0 +1,11 @@
+﻿const router = require('express').Router();
+const ctrl = require('../controllers/ai.controller');
+const { protect, authorize } = require('../middleware/auth');
+router.use(protect);
+router.post('/chatbot', ctrl.chatbot);
+router.post('/generate-jd', authorize('super_admin','hr_admin'), ctrl.generateJD);
+router.post('/screen-resume', authorize('super_admin','hr_admin'), ctrl.screenResume);
+router.post('/performance-feedback', authorize('super_admin','hr_admin','manager'), ctrl.generateFeedback);
+router.get('/attrition-report', authorize('super_admin','hr_admin'), ctrl.attritionReport);
+router.post('/workforce-insights', authorize('super_admin','hr_admin'), ctrl.workforceInsights);
+module.exports = router;

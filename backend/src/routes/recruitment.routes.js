@@ -1,0 +1,14 @@
+﻿const router = require('express').Router();
+const ctrl = require('../controllers/recruitment.controller');
+const { protect, authorize } = require('../middleware/auth');
+router.use(protect);
+router.get('/jobs', ctrl.getJobs);
+router.post('/jobs', authorize('super_admin','hr_admin'), ctrl.createJob);
+router.post('/jobs/generate-jd', authorize('super_admin','hr_admin'), ctrl.generateJD);
+router.get('/applications', ctrl.getApplications);
+router.post('/applications', ctrl.submitApplication);
+router.post('/applications/bulk-screen', authorize('super_admin','hr_admin'), ctrl.bulkScreen);
+router.post('/applications/:id/screen', authorize('super_admin','hr_admin'), ctrl.screenApplication);
+router.patch('/applications/:id/status', authorize('super_admin','hr_admin','manager'), ctrl.updateApplicationStatus);
+router.get('/stats', ctrl.getStats);
+module.exports = router;

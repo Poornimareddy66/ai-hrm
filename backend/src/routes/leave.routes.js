@@ -1,0 +1,11 @@
+﻿const router = require('express').Router();
+const ctrl = require('../controllers/leave.controller');
+const { protect, authorize } = require('../middleware/auth');
+router.use(protect);
+router.get('/calendar', ctrl.getCalendar);
+router.get('/balance/:employeeId', ctrl.getBalance);
+router.get('/requests', ctrl.getAll);
+router.post('/requests', ctrl.createRequest);
+router.patch('/requests/:id/approve', authorize('super_admin','hr_admin','manager'), ctrl.approveLeave);
+router.patch('/requests/:id/reject', authorize('super_admin','hr_admin','manager'), ctrl.rejectLeave);
+module.exports = router;
